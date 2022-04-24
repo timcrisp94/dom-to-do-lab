@@ -11,6 +11,11 @@ submitBtn.addEventListener('click', function(evt) {
   todoInput.value = ''
 })
 
+todoList.addEventListener('click', function(evt) {
+  const parentNode = evt.target.parentNode
+  parentNode.removeChild(evt.target)
+})
+
 resetBtn.addEventListener('click', function(evt) {
   todoList.innerHTML = ''
   todoInput.value = ''
